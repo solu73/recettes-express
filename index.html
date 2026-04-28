@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Recettes Express</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {font-family: Arial; background:#f4f4f4; padding:10px}
+.card {background:#fff; padding:10px; border-radius:6px; margin-bottom:10px}
+button {padding:6px 10px; margin:5px}
+.hidden {display:none}
+ul li {margin-left:10px}
+.suppr {color:red; cursor:pointer; margin-left:10px}
+</style>
+</head>
+
+<body>
+<div style="text-align:center;">
+  <img src="logo.png" alt="Logo Recettes Express" style="max-width:150px;">
+</div>
+
+<!-- LOGIN -->
+<div id="login" class="card">
+<h2>Connexion</h2>
+<input id="user" placeholder="Pseudo">
+<input id="pass" type="password" placeholder="Mot de passe">
+<br>
+<button onclick="register()">Créer un compte</button>
+<button onclick="loginUser()">Se connecter</button>
+<p id="msg"></p>
+</div>
+
+<!-- APP -->
+<div id="app" class="hidden">
+<h1>🍽️ Recettes Express</h1>
+
+<button onclick="genererMenu()">📅 Générer un menu 5 jours</button>
+
+<h2>📅 Menu de la semaine</h2>
+<ul id="menu"></ul>
+
+<h2>📖 Recettes</h2>
+<div id="recipes"></div>
+
+<h2>🛒 Liste de courses</h2>
+<ul id="shopping"></ul>
+
+<h3>➕ Ajouter un article</h3>
+<input id="manuel" placeholder="Ex : Café, Beurre…">
+<button onclick="ajoutManuel()">Ajouter</button>
+</div>
+
+<script>
+/* ========== LOGIN ========== */
+function register(){
+  localStorage.setItem("user", user.value+"|"+pass.value);
+  ouvrirApp();
+}
+function loginUser(){
+  const data = localStorage.getItem("user");
+  if(!data){msg.textContent="Aucun compte";return;}
+  const [u,p]=data.split("|");
+  if(user.value===u && pass.value===p) ouvrirApp();
+  else msg.textContent="Erreur";
+}
+function ouvrirApp(){
+  login.style.display="none";
+  app.classList.remove("hidden");
+  afficherRecettes();
+  afficherListe();
+}
+
+/* ========== RECETTES ========== */
+const recettes = [
+  { nom:"Pâtes ail & huile", ingredients:["Pâtes","Ail","Huile"], etapes:["Cuire pâtes","Dorer ail","Mélanger"] },
+  { nom:"Omelette fromage", ingredients:["Œufs","Fromage","Beurre"], etapes:["Battre","Cuire","Ajouter fromage"] },
+  { nom:"Poulet au four", ingredients:["Poulet","Pommes de terre"], etapes:["Préchauffer","Cuire 20 min"] },
+  { nom:"Wraps thon", ingredients:["Wraps","Thon","Fromage frais"], etapes:["Mélanger","Garnir","Rouler"] },
+  { nom:"Riz œufs soja", ingredients:["Riz","Œufs","Soja"], etapes:["Cuire","Mélanger"] }
+];
+
+const listeAuto = {};     // ingrédients des recettes
+const listeManuelle = {}; // ajouts perso
+
+const shopping = document.getElementById("shopping");
+const menu = document.getElementById("menu");
+const recipesDiv = document.getElementById("recipes");
+
+/* ========== RECETTES AFFICHAGE ========== */
+function afficherRecettes(){
+  recipesDiv.innerHTML="";
+  recettes.forEach((r,i)=>{
+    const d=document.createElement("div");
+    d.className="card";
+    d.innerHTML=`
+      <b>${r.nom}</b><br>
+      ${r.ingredients.join(", ")}<br>
+      <button onclick="ajouterRecette(${i})">Ajouter à la liste</button>
+      <button onclick="toggle(${i})">Voir la recette</button>
+      <div id="e${i}" class="hidden">
+        <ol>${r.etapes.map(e=>"<li>"+e+"</li>").join("")}</ol>
+      </div>
+    `;
+    recipesDiv.appendChild(d);
+  });
+}
+function toggle(i){
+  document.getElementById("e"+i).classList.toggle("hidden");
+}
+
+/* ========== MENU AUTO ========== */
+function genererMenu(){
+  menu.innerHTML="";
+  for(let k in listeAuto) delete listeAuto[k];
+
+  const sel=[...recettes].sort(()=>0.5-Math.random()).slice(0,5);
+  sel.forEach((r,i)=>{
+    menu.innerHTML+=`<li>Jour ${i+1} : ${r.nom}</li>`;
+    r.ingredients.forEach(x=>{
+      listeAuto[x]=(listeAuto[x]||0)+1;
+    });
+  });
+  afficherListe();
+}
+
+/* ========== LISTE MANUELLE ========== */
+function ajoutManuel(){
+  if(!manuel.value) return;
+  listeManuelle[manuel.value]=(listeManuelle[manuel.value]||0)+1;
+  manuel.value="";
+  afficherListe();
+}
+
+/* ========== LISTE COURSES AFFICHAGE ========== */
+function afficherListe(){
+  shopping.innerHTML="";
+  const fusion={...listeAuto};
+  for(let k in listeManuelle){
+    fusion[k]=(fusion[k]||0)+listeManuelle[k];
+  }
+  Object.entries(fusion).forEach(([k,v])=>{
+    const li=document.createElement("li");
+    li.innerHTML=`${k} x${v} <span class="suppr" onclick="supprimer('${k}')">❌</span>`;
+    shopping.appendChild(li);
+  });
+}
+
+function supprimer(nom){
+  delete listeAuto[nom];
+  delete listeManuelle[nom];
+  afficherListe();
+}
+
+/* ========== AJOUT RECETTE MANUEL ========== */
+function ajouterRecette(i){
+  recettes[i].ingredients.forEach(x=>{
+    listeAuto[x]=(listeAuto[x]||0)+1;
+  });
+  afficherListe();
+}
+</script>
+
+</body>
+</html>

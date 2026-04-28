@@ -1,0 +1,64 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 10px;
+}
+
+h1, h2 {
+  margin-top: 0;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filters label {
+  margin-right: 15px;
+}
+
+.recipe {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+button {
+  padding: 6px 10px;
+  margin-top: 5px;
+}
+
+input {
+  padding: 6px;
+  margin: 5px 0;
+  width: 100%;
+}
+card {
+  background: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+button {
+  margin-top: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+ul li {
+  list-style: "✅ ";
+  margin-left: 10px;
+}
