@@ -1,4 +1,13 @@
-[
+function afficherRecettes(){
+  recipesDiv.innerHTML="";
+  const mot = recherche.value.toLowerCase();
+
+  recettes
+    .filter(r => r.ingredients.some(i => i.toLowerCase().includes(mot)))
+    .forEach((r,i)=>{
+      // affichage normal
+    });
+}
 }
   {
     "nom": "Pâtes ail et huile",
