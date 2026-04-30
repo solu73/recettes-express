@@ -1,15 +1,209 @@
-{
-  "name": "Recettes Express",
-  "short_name": "Recettes",
-  "start_url": "index.html",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#ffffff",
-  "icons": [
-    {
-      "src": "icon.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    }
-  ]
+[
+let favoris = JSON.parse(localStorage.getItem("favoris") || "[]");
+
+function toggleFavori(index){
+  const nom = recettes[index].nom;
+  if (favoris.includes(nom)) {
+    favoris = favoris.filter(f => f !== nom);
+  } else {
+    favoris.push(nom);
+  }
+  localStorage.setItem("favoris", JSON.stringify(favoris));
+  alert("Favoris mis à jour ⭐");
 }
+  {
+    "nom": "Pâtes ail et huile",
+	<button onclick="toggleFavori(${i})">⭐</button>
+    "ingredients": ["Pâtes", "Ail", "Huile d'olive"],
+    "etapes": ["Cuire les pâtes", "Dorer l’ail", "Mélanger et servir"],
+    "vegetarien": true,
+    "four": false
+  },
+  {
+    "nom": "Omelette fromage",
+	<button onclick="toggleFavori(${i})">⭐</button>
+    "ingredients": ["Œufs", "Fromage", "Beurre"],
+    "etapes": ["Battre les œufs", "Cuire l’omelette", "Ajouter le fromage"],
+    "vegetarien": true,
+    "four": false
+  },
+  {
+    "nom": "Riz œufs soja",
+	<button onclick="toggleFavori(${i})">⭐</button>
+    "ingredients": ["Riz", "Œufs", "Sauce soja"],
+    "etapes": ["Cuire le riz", "Cuire les œufs", "Mélanger avec le riz"],
+    "vegetarien": true,
+    "four": false
+  },
+  {
+    "nom": "Poêlée de légumes",
+	<button onclick="toggleFavori(${i})">⭐</button>
+    "ingredients": ["Légumes surgelés", "Huile"],
+    "etapes": ["Chauffer l’huile", "Cuire les légumes 10 min"],
+    "vegetarien": true,
+    "four": false
+  },
+  {
+    "nom": "Semoule pois chiches",
+	<button onclick="toggleFavori(${i})">⭐</button>
+    "ingredients": ["Semoule", "Pois chiches", "Épices"],
+    "etapes": ["Réhydrater la semoule", "Ajouter pois chiches", "Mélanger"],
+    "vegetarien": true,
+    "four": false
+  },
+  {
+    "nom": "Pâtes pesto",
+	<button onclick="toggleFavori(${i})">⭐</button>
+    "ingredients": ["Pâtes", "Pesto"],
+    "etapes": ["Cuire les pâtes", "Mélanger avec le pesto"],
+    "vegetarien": true,
+    "four": false
+  },
+  {
+    "nom": "Pizza tortilla",
+	<button onclick="toggleFavori(${i})">⭐</button>
+    "ingredients": ["Tortilla", "Sauce tomate", "Fromage"],
+    "etapes": ["Garnir la tortilla", "Cuire au four 10 min"],
+    "vegetarien": true,
+    "four": true
+  },
+  {
+    "nom": "Gratin de pâtes",
+	<button onclick="toggleFavori(${i})">⭐</button>
+    "ingredients": ["Pâtes", "Crème", "Fromage"],
+    "etapes": ["Cuire les pâtes", "Ajouter crème et fromage", "Gratiner"],
+    "vegetarien": true,
+    "four": true
+  },
+  {
+    "nom": "Quiche rapide fromage",
+	<button onclick="toggleFavori(${i})">⭐</button>
+    "ingredients": ["Pâte", "Œufs", "Crème", "Fromage"],
+    "etapes": ["Battre œufs et crème", "Garnir la pâte", "Cuire au four"],
+    "vegetarien": true,
+    "four": true
+  },
+  {
+    "nom": "Légumes rôtis",
+	<button onclick="toggleFavori(${i})">⭐</button>
+    "ingredients": ["Légumes", "Huile", "Herbes"],
+    "etapes": ["Couper les légumes", "Enfourner 20 min"],
+    "vegetarien": true,
+    "four": true
+  },
+
+  {
+    "nom": "Poulet au four pommes de terre",
+	<button onclick="toggleFavori(${i})">⭐</button>
+    "ingredients": ["Poulet", "Pommes de terre", "Huile"],
+    "etapes": ["Préchauffer le four", "Mettre au four 25 min"],
+    "vegetarien": false,
+    "four": true
+  },
+  {
+    "nom": "Poulet moutarde",
+	<button onclick="toggleFavori(${i})">⭐</button>
+    "ingredients": ["Poulet", "Moutarde", "Crème"],
+    "etapes": ["Cuire le poulet", "Ajouter moutarde et crème"],
+    "vegetarien": false,
+    "four": false
+  },
+  {
+    "nom": "Riz au poulet",
+	<button onclick="toggleFavori(${i})">⭐</button>
+    "ingredients": ["Riz", "Poulet"],
+    "etapes": ["Cuire le riz", "Cuire le poulet", "Assembler"],
+    "vegetarien": false,
+    "four": false
+  },
+  {
+    "nom": "Saucisses purée",
+	<button onclick="toggleFavori(${i})">⭐</button>
+	<button onclick="toggleFavori(${i})">⭐</button>
+    "ingredients": ["Saucisses", "Purée"],
+    "etapes": ["Cuire les saucisses", "Préparer la purée"],
+    "vegetarien": false,
+    "four": false
+  },
+  {
+    "nom": "Steak haché riz",
+	<button onclick="toggleFavori(${i})">⭐</button>
+    "ingredients": ["Steak haché", "Riz"],
+    "etapes": ["Cuire le riz", "Cuire le steak"],
+    "vegetarien": false,
+    "four": false
+  },
+  {
+    "nom": "Wraps thon fromage",
+	<button onclick="toggleFavori(${i})">⭐</button>
+    "ingredients": ["Wraps", "Thon", "Fromage frais"],
+    "etapes": ["Mélanger thon et fromage", "Garnir les wraps"],
+    "vegetarien": false,
+    "four": false
+  },
+  {
+    "nom": "Burger maison",
+	<button onclick="toggleFavori(${i})">⭐</button>
+    "ingredients": ["Pain burger", "Steak haché", "Fromage"],
+    "etapes": ["Cuire steak", "Assembler le burger"],
+    "vegetarien": false,
+    "four": false
+  },
+  {
+    "nom": "Hot-dog",
+	<button onclick="toggleFavori(${i})">⭐</button>
+    "ingredients": ["Pain", "Saucisse"],
+    "etapes": ["Cuire la saucisse", "Assembler"],
+    "vegetarien": false,
+    "four": false
+  },
+  {
+    "nom": "Pâtes carbonara express",
+	<button onclick="toggleFavori(${i})">⭐</button>
+    "ingredients": ["Pâtes", "Lardons", "Crème"],
+    "etapes": ["Cuire pâtes", "Cuire lardons", "Mélanger"],
+    "vegetarien": false,
+    "four": false
+  },
+
+  {
+    "nom": "Poisson pané",
+	<button onclick="toggleFavori(${i})">⭐</button>
+    "ingredients": ["Poisson pané", "Citron"],
+    "etapes": ["Cuire le poisson", "Ajouter citron"],
+    "vegetarien": false,
+    "four": false
+  },
+  {
+    "nom": "Saumon au four",
+	<button onclick="toggleFavori(${i})">⭐</button>
+    "ingredients": ["Saumon", "Citron", "Huile"],
+    "etapes": ["Préchauffer four", "Cuire 15 min"],
+    "vegetarien": false,
+    "four": true
+  },
+  {
+    "nom": "Pâtes au thon",
+	<button onclick="toggleFavori(${i})">⭐</button>
+    "ingredients": ["Pâtes", "Thon"],
+    "etapes": ["Cuire les pâtes", "Ajouter le thon"],
+    "vegetarien": false,
+    "four": false
+  },
+  {
+    "nom": "Riz thon tomate",
+	<button onclick="toggleFavori(${i})">⭐</button>
+    "ingredients": ["Riz", "Thon", "Tomates"],
+    "etapes": ["Cuire riz", "Ajouter thon et tomates"],
+    "vegetarien": false,
+    "four": false
+  },
+  {
+    "nom": "Riz saumon",
+	<button onclick="toggleFavori(${i})">⭐</button>
+    "ingredients": ["Riz", "Saumon"],
+    "etapes": ["Cuire riz", "Cuire saumon", "Assembler"],
+    "vegetarien": false,
+    "four": false
+  }
+]
