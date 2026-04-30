@@ -1,15 +1,4 @@
 [
-let favoris = JSON.parse(localStorage.getItem("favoris") || "[]");
-
-function toggleFavori(index){
-  const nom = recettes[index].nom;
-  if (favoris.includes(nom)) {
-    favoris = favoris.filter(f => f !== nom);
-  } else {
-    favoris.push(nom);
-  }
-  localStorage.setItem("favoris", JSON.stringify(favoris));
-  alert("Favoris mis à jour ⭐");
 }
   {
     "nom": "Pâtes ail et huile",
@@ -205,5 +194,16 @@ function toggleFavori(index){
     "etapes": ["Cuire riz", "Cuire saumon", "Assembler"],
     "vegetarien": false,
     "four": false
+	let favoris = JSON.parse(localStorage.getItem("favoris") || "[]");
+
+function toggleFavori(index){
+  const nom = recettes[index].nom;
+  if (favoris.includes(nom)) {
+    favoris = favoris.filter(f => f !== nom);
+  } else {
+    favoris.push(nom);
+  }
+  localStorage.setItem("favoris", JSON.stringify(favoris));
+  alert("Favoris mis à jour ⭐");
   }
 ]
