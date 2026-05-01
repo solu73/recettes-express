@@ -1,1 +1,257 @@
-
+[
+  {
+    "nom": "Saucisses barbecue",[
+  {
+    "nom": "Poulet Cookeo express",
+    "categorie": "cookeo",
+    "ingredients": ["Poulet", "Oignon", "Épices"],
+    "etapes": [
+      "Mettre tous les ingrédients dans le Cookeo",
+      "Cuisson rapide 10 min",
+      "Servir"
+    ],
+    "temps": 15,
+    "vegetarien": false
+  },
+  {
+    "nom": "Riz légumes Cookeo",
+    "categorie": "cookeo",
+    "ingredients": ["Riz", "Légumes surgelés", "Eau"],
+    "etapes": [
+      "Mettre tous les ingrédients",
+      "Cuisson rapide",
+      "Servir chaud"
+    ],
+    "temps": 12,
+    "vegetarien": true
+	[
+  {
+    "nom": "Poulet curry Cookeo",
+    "categorie": "cookeo",
+    "ingredients": ["Poulet", "Crème", "Curry"],
+    "etapes": [
+      "Mettre tous les ingrédients dans le Cookeo",
+      "Cuisson rapide 10 minutes",
+      "Mélanger et servir"
+    ],
+    "temps": 15,
+    "vegetarien": false
+  },
+  {
+    "nom": "Riz jambon Cookeo",
+    "categorie": "cookeo",
+    "ingredients": ["Riz", "Jambon", "Eau"],
+    "etapes": [
+      "Mettre riz, jambon et eau",
+      "Cuisson rapide",
+      "Servir chaud"
+    ],
+    "temps": 12,
+    "vegetarien": false
+  },
+  {
+    "nom": "Lentilles saucisse Cookeo",
+    "categorie": "cookeo",
+    "ingredients": ["Lentilles", "Saucisse"],
+    "etapes": [
+      "Mettre les ingrédients",
+      "Cuisson rapide 15 minutes"
+    ],
+    "temps": 15,
+    "vegetarien": false
+  }
+]
+  
+    "categorie": "barbecue",
+    "ingredients": ["Saucisses"],[
+  {
+    "nom": "Poulet Cookeo express",
+    "categorie": "cookeo",[
+  {
+    "nom": "Pâtes ail crème",
+    "categorie": "poele",
+    "ingredients": ["Pâtes", "Ail", "Crème fraîche"],
+    "etapes": [
+      "Cuire les pâtes",
+      "Dorer l'ail à la poêle",
+      "Ajouter la crème et mélanger"
+    ],
+    "temps": 15,
+    "vegetarien": true
+  },
+  {
+    "nom": "Omelette fromage",
+    "categorie": "poele",
+    "ingredients": ["Œufs", "Fromage", "Beurre"],
+    "etapes": [
+      "Battre les œufs",
+      "Cuire à feu doux",
+      "Ajouter le fromage"
+    ],
+    "temps": 10,
+    "vegetarien": true
+  },
+  {
+    "nom": "Poulet paprika poêle",
+    "categorie": "poele",
+    "ingredients": ["Poulet", "Paprika", "Huile"],
+    "etapes": [
+      "Couper le poulet",
+      "Cuire à la poêle",
+      "Assaisonner"
+    ],
+    "temps": 15,
+    "vegetarien": false
+  }
+[
+  {
+    "nom": "Poêlée bœuf oignons",
+    "categorie": "poele",
+    "ingredients": ["Bœuf", "Oignons", "Huile"],
+    "etapes": [
+      "Faire revenir les oignons",
+      "Ajouter le bœuf",
+      "Cuire 10 minutes"
+    ],
+    "temps": 12,
+    "vegetarien": false
+  },
+  {
+    "nom": "Tortilla jambon fromage",
+    "categorie": "poele",
+    "ingredients": ["Tortilla", "Jambon", "Fromage"],
+    "etapes": [
+      "Garnir la tortilla",
+      "Cuire à la poêle 5 minutes"
+    ],
+    "temps": 10,
+    "vegetarien": false
+  }
+]
+    "ingredients": ["Poulet", "Oignon", "Épices"],
+    "etapes": [
+      "Mettre tous les ingrédients dans le Cookeo",
+      "Cuisson rapide 10 min",
+      "Servir"
+    ],
+    "temps": 15,
+    "vegetarien": false
+  },
+  {
+    "nom": "Riz légumes Cookeo",
+    "categorie": "cookeo",
+    "ingredients": ["Riz", "Légumes surgelés", "Eau"],
+    "etapes": [
+      "Mettre tous les ingrédients",
+      "Cuisson rapide",
+      "Servir chaud"
+    ],
+    "temps": 12,
+    "vegetarien": true
+	[
+  {
+    "nom": "Poulet curry Cookeo",
+    "categorie": "cookeo",
+    "ingredients": ["Poulet", "Crème", "Curry"],
+    "etapes": [
+      "Mettre tous les ingrédients dans le Cookeo",
+      "Cuisson rapide 10 minutes",
+      "Mélanger et servir"
+    ],
+    "temps": 15,
+    "vegetarien": false
+  },
+  {
+    "nom": "Riz jambon Cookeo",
+    "categorie": "cookeo",
+    "ingredients": ["Riz", "Jambon", "Eau"],
+    "etapes": [
+      "Mettre riz, jambon et eau",
+      "Cuisson rapide",
+      "Servir chaud"
+    ],
+    "temps": 12,
+    "vegetarien": false
+  },
+  {
+    "nom": "Lentilles saucisse Cookeo",
+    "categorie": "cookeo",
+    "ingredients": ["Lentilles", "Saucisse"],
+    "etapes": [
+      "Mettre les ingrédients",
+      "Cuisson rapide 15 minutes"
+    ],
+    "temps": 15,
+    "vegetarien": false
+  }
+]
+  
+    "etapes": [
+      "Préchauffer le barbecue",
+      "Cuire 10 min",
+      "Retourner régulièrement"
+    ],
+    "temps": 10,
+    "vegetarien": false
+  },
+  {
+    "nom": "Brochettes poulet",
+    "categorie": "barbecue",
+    "ingredients": ["Poulet", "Poivrons", "Oignons"],
+    "etapes": [
+      "Couper en morceaux",
+      "Assembler les brochettes",
+      "Cuire au barbecue"
+    ],
+    "temps": 15,
+    "vegetarien": false
+  }
+[
+  {
+    "nom": "Côtes de porc barbecue",
+    "categorie": "barbecue",
+    "ingredients": ["Côtes de porc", "Épices BBQ"],
+    "etapes": [
+      "Assaisonner la viande",
+      "Cuire 12 minutes au barbecue",
+      "Retourner régulièrement"
+    ],
+    "temps": 12,
+    "vegetarien": false
+  },
+  {
+    "nom": "Brochettes bœuf oignon",
+    "categorie": "barbecue",
+    "ingredients": ["Bœuf", "Oignon"],
+    "etapes": [
+      "Assembler les brochettes",
+      "Cuire 10–12 minutes"
+    ],
+    "temps": 12,
+    "vegetarien": false
+  }
+[
+  {
+    "nom": "Poêlée bœuf oignons",
+    "categorie": "poele",
+    "ingredients": ["Bœuf", "Oignons", "Huile"],
+    "etapes": [
+      "Faire revenir les oignons",
+      "Ajouter le bœuf",
+      "Cuire 10 minutes"
+    ],
+    "temps": 12,
+    "vegetarien": false
+  },
+  {
+    "nom": "Tortilla jambon fromage",
+    "categorie": "poele",
+    "ingredients": ["Tortilla", "Jambon", "Fromage"],
+    "etapes": [
+      "Garnir la tortilla",
+      "Cuire à la poêle 5 minutes"
+    ],
+    "temps": 10,
+    "vegetarien": false
+  }
+]
