@@ -1,1 +1,62 @@
-
+[
+  {
+    "nom": "Pâtes ail crème",
+    "categorie": "poele",
+    "ingredients": ["Pâtes", "Ail", "Crème fraîche"],
+    "etapes": [
+      "Cuire les pâtes",
+      "Dorer l'ail à la poêle",
+      "Ajouter la crème et mélanger"
+    ],
+    "temps": 15,
+    "vegetarien": true
+  },
+  {
+    "nom": "Omelette fromage",
+    "categorie": "poele",
+    "ingredients": ["Œufs", "Fromage", "Beurre"],
+    "etapes": [
+      "Battre les œufs",
+      "Cuire à feu doux",
+      "Ajouter le fromage"
+    ],
+    "temps": 10,
+    "vegetarien": true
+  },
+  {
+    "nom": "Poulet paprika poêle",
+    "categorie": "poele",
+    "ingredients": ["Poulet", "Paprika", "Huile"],
+    "etapes": [
+      "Couper le poulet",
+      "Cuire à la poêle",
+      "Assaisonner"
+    ],
+    "temps": 15,
+    "vegetarien": false
+  }
+[
+  {
+    "nom": "Poêlée bœuf oignons",
+    "categorie": "poele",
+    "ingredients": ["Bœuf", "Oignons", "Huile"],
+    "etapes": [
+      "Faire revenir les oignons",
+      "Ajouter le bœuf",
+      "Cuire 10 minutes"
+    ],
+    "temps": 12,
+    "vegetarien": false
+  },
+  {
+    "nom": "Tortilla jambon fromage",
+    "categorie": "poele",
+    "ingredients": ["Tortilla", "Jambon", "Fromage"],
+    "etapes": [
+      "Garnir la tortilla",
+      "Cuire à la poêle 5 minutes"
+    ],
+    "temps": 10,
+    "vegetarien": false
+  }
+]
