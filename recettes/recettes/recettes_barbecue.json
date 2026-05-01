@@ -1,1 +1,74 @@
-[]
+[
+  {
+    "nom": "Saucisses barbecue",
+    "categorie": "barbecue",
+    "ingredients": ["Saucisses"],
+    "etapes": [
+      "Préchauffer le barbecue",
+      "Cuire 10 min",
+      "Retourner régulièrement"
+    ],
+    "temps": 10,
+    "vegetarien": false
+  },
+  {
+    "nom": "Brochettes poulet",
+    "categorie": "barbecue",
+    "ingredients": ["Poulet", "Poivrons", "Oignons"],
+    "etapes": [
+      "Couper en morceaux",
+      "Assembler les brochettes",
+      "Cuire au barbecue"
+    ],
+    "temps": 15,
+    "vegetarien": false
+  }
+[
+  {
+    "nom": "Côtes de porc barbecue",
+    "categorie": "barbecue",
+    "ingredients": ["Côtes de porc", "Épices BBQ"],
+    "etapes": [
+      "Assaisonner la viande",
+      "Cuire 12 minutes au barbecue",
+      "Retourner régulièrement"
+    ],
+    "temps": 12,
+    "vegetarien": false
+  },
+  {
+    "nom": "Brochettes bœuf oignon",
+    "categorie": "barbecue",
+    "ingredients": ["Bœuf", "Oignon"],
+    "etapes": [
+      "Assembler les brochettes",
+      "Cuire 10–12 minutes"
+    ],
+    "temps": 12,
+    "vegetarien": false
+  }
+[
+  {
+    "nom": "Poêlée bœuf oignons",
+    "categorie": "poele",
+    "ingredients": ["Bœuf", "Oignons", "Huile"],
+    "etapes": [
+      "Faire revenir les oignons",
+      "Ajouter le bœuf",
+      "Cuire 10 minutes"
+    ],
+    "temps": 12,
+    "vegetarien": false
+  },
+  {
+    "nom": "Tortilla jambon fromage",
+    "categorie": "poele",
+    "ingredients": ["Tortilla", "Jambon", "Fromage"],
+    "etapes": [
+      "Garnir la tortilla",
+      "Cuire à la poêle 5 minutes"
+    ],
+    "temps": 10,
+    "vegetarien": false
+  }
+]poulet 
