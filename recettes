@@ -1,1 +1,62 @@
-
+[
+  {
+    "nom": "Poulet Cookeo express",
+    "categorie": "cookeo",
+    "ingredients": ["Poulet", "Oignon", "Épices"],
+    "etapes": [
+      "Mettre tous les ingrédients dans le Cookeo",
+      "Cuisson rapide 10 min",
+      "Servir"
+    ],
+    "temps": 15,
+    "vegetarien": false
+  },
+  {
+    "nom": "Riz légumes Cookeo",
+    "categorie": "cookeo",
+    "ingredients": ["Riz", "Légumes surgelés", "Eau"],
+    "etapes": [
+      "Mettre tous les ingrédients",
+      "Cuisson rapide",
+      "Servir chaud"
+    ],
+    "temps": 12,
+    "vegetarien": true
+	[
+  {
+    "nom": "Poulet curry Cookeo",
+    "categorie": "cookeo",
+    "ingredients": ["Poulet", "Crème", "Curry"],
+    "etapes": [
+      "Mettre tous les ingrédients dans le Cookeo",
+      "Cuisson rapide 10 minutes",
+      "Mélanger et servir"
+    ],
+    "temps": 15,
+    "vegetarien": false
+  },
+  {
+    "nom": "Riz jambon Cookeo",
+    "categorie": "cookeo",
+    "ingredients": ["Riz", "Jambon", "Eau"],
+    "etapes": [
+      "Mettre riz, jambon et eau",
+      "Cuisson rapide",
+      "Servir chaud"
+    ],
+    "temps": 12,
+    "vegetarien": false
+  },
+  {
+    "nom": "Lentilles saucisse Cookeo",
+    "categorie": "cookeo",
+    "ingredients": ["Lentilles", "Saucisse"],
+    "etapes": [
+      "Mettre les ingrédients",
+      "Cuisson rapide 15 minutes"
+    ],
+    "temps": 15,
+    "vegetarien": false
+  }
+]
+  
